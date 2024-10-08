@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <title>Hello, world!</title>
+</head>
+<body>
+ 
+{{>navbar data=details}}
+
+  {{>slider slides=slides}}
+
+
+  {{!--  banner1-section --}}
+<section class="banner1_section py-5"  style="background-color:#330033; color: white ">
+
+<div class="container text-center ">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>
+        start learning nwe echnology here !!  </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vero minima nostrum.
+        </p>
+        <button class="btn btn-outline-primary">Start learning</button>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+{{!-- fr32 --}}
+  <section id="servicesection" class="py-4 background1 ">
+<div class="container ">
+
+<h1 class="text-center text-secondary ">Service that We Provide</h1>
+<div class="row mt-2 ">
+ {{#each services}}
+  <div class=" col-md-4">
+
+<div class="card">
+<div class="card-body" >
+  <div class="container text-center py-3">
+    {{!-- <i class="fab fa-accusoft service_icon"></i> --}}
+    <i class="{{this.icon}} service_icon" style="font-size: 100px;"></i>
+  </div>
+  <h3 class="card-title">{{this.title}}</h3>
+  <p>{{this.description}}</p>
+
+  <a href="{{this.link}}">{{this.linkText}}</a>
+  <a href="#1" class="ml-3">Support</a>
+</div>
+  
+</div>
+
+  </div> 
+  {{/each}}
+  
+
+  
+</div>
+
+
+
+</div>
+  </section>
+
+  </section>
+{{!-- banner2 image --}}
+
+<section>
+  <div class="banner2_section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center pt-4">
+<h3>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a tempore deleniti?
+</h3>
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus eaque enim, quaerat, nam accusantium harum molestiae delectus cupiditate dignissimos, soluta consequuntur pariatur deleniti. Quia.
+</p>
+<button class="btn btn-primary">Click here
+
+</button>
+      </div>
+      <div class="col-mid-6 text-center py-4 ">
+<img src="/static/images/grapic1.webp" style="height:350px;"  class="img-fluid" alt="" >
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{{!-- banner3 --}}
+
+<section>
+  <div class="banner3_section py-5">
+  <div class="container">
+    <div class="row">
+       <div class="col-mid-6 text-center py-10">
+<img src="/static/images/grapic2.jpg" style="height:350px;" class="img-fluid"  alt="" >
+      </div>
+
+
+      <div class="col-md-6 text-center pt-8">
+<h3>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a tempore deleniti?
+</h3>
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus eaque enim, quaerat, nam accusantium harum molestiae delectus cupiditate dignissimos, soluta consequuntur pariatur deleniti. Quia.
+</p>
+<button class="btn btn-primary">Click here
+
+</button>
+      </div>
+     
+    </div>
+ 
+</section>
+
+
+
+
+
+
+
+
+  {{!-- contract area --}}
+
+
+  {{!-- </section id="contract_us_section" class="py-5 " style=" background-colour :black"> --}}
+  <section id="contract_us_section" class="py-5" style="background-color:#330033; color: white ">
+
+  <div class="container">
+    <h3 class="text-center text-muted"> contact us</h3>
+    <div class="row">
+      <div class="col-md-12">
+
+
+
+<form action="/process-contact-form" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1">Your Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="mb-3">
+    <label for="contractNumberField">Your contract number</label>
+    <input name="phone" type="number" class="form-control" id="contractNUmberField" placeholder="Password">
+  </div>
+
+<div class="form-floating my-2">
+  <textarea name="query" style="height: 250px;" class="form-control" placeholder="Enter your query here" id="queryField"></textarea>
+  <label for="queryField">Comments</label>
+</div>
+<div class="container text-center">
+ <button type="submit" class="btn btn-primary">Submit</button>
+
+</div>
+ </form>
+
+        
+      </div>
+    </div>
+  </div>
+  </section>
+  {{!-- about section --}}
+
+  <section id="about_section py-5">
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>About this side</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime earum ratione debitis eaque iusto eligendi vel. Maiores beatae at repellendus cum ratione cumque, necessitatibus iure, error in odit saepe voluptas suscipit, quidem assumenda! Quo, nam alias pariatur mollitia non, libero, numquam neque iste cumque aliquam nihil provident amet! Commodi pariatur aspernatur eum quos fugit saepe consectetur quas dolorem facere delectus? Deleniti porro magnam labore, omnis consequuntur explicabo, quaerat odio quibusdam, pariatur excepturi quae! Et dolorem nostrum ut voluptatem cupiditate impedit.</p>
+   <button class="btn btn-success btn-lg">
+  Contact Us
+</button>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  {{!-- footer --}}
+<footer class="
+footer text-center py-5"  style="background-color:#330033; color: white ">
+
+  <div class="container" >
+<div class="row">
+  <div class="col-md-12">
+    @ 2021 Copyright: <span>LearnWithTechnicalSolution</span>
+</div>
+  </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   </body>
+</html>

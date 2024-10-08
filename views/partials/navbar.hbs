@@ -1,0 +1,23 @@
+<nav class="navbar border-bottom navbar-expand-lg py-4 navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://yt3.googleusercontent.com/dVIvYpouex-j2UIie4tE0zborNv950LpORLEV_b9W8YXr9-6gt2H9U6UibhGqA3m-OAEgVCW=s160-c-k-c0x00ffffff-no-rj" width="35" height="35" style="border-radius: 50%;" alt="">
+
+          Techincal solution</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           
+            <ul class="navbar-nav ml-auto">
+              {{#each data.links}}
+               <li class="nav-item active"></li>
+                    <a class="nav-link" href="{{this.url}}">{{this.label}} <span class="sr-only">(current)</span></a>
+                </li>
+               {{/each}}
+            </ul>
+        </div>
+    </div>
+</nav>
+{{!-- {{details}} --}}
